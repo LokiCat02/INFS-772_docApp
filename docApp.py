@@ -65,7 +65,6 @@ with st.form('myform', clear_on_submit=True):
         with st.spinner('Calculating...'):
             response = generate_response(uploaded_file, st.secrets['OPENAI_API_KEY'], query_text)
             result.append(response)
-            del openai_api_key
 
 if len(result):
     st.info(response)
