@@ -24,7 +24,7 @@ def generate_response(uploaded_file, openai_api_key, query_text):
             texts, 
             embeddings, 
             collection_name="my_collection", 
-            persist_directory=None
+            persist_directory="./chroma_store"
         )
         # Create retriever interface
         retriever = db.as_retriever()
